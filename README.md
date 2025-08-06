@@ -1,5 +1,5 @@
 # ✍🏻 studyKotlinSpring
-Kotlin 언어를 익히기 위해 Kotlin 언어로 Spring Boot 기반의 백엔드 API를 인프런 강의를 통해서 예제로 학습
+Kotlin 언어로 백엔드를 구성하는 공부를 위해 Kotlin 언어로 Spring Boot 기반의 백엔드 API를 인프런 강의를 통해서 예제로 학습
 - Kakako API와 연동하여 Daum 블로그 내용을 검색하는 API 만들기
 - 키워드를 검색할 때마다 count를 증가해, 상위 10개 인기 검색어를 집계하는 API 만들기
 
