@@ -1,0 +1,35 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /  # 루트 경로 (예: http://localhost:9999/)
+    encoding:
+      charset: UTF-8   # 요청/응답의 문자 인코딩을 UTF-8로 설정
+      force: true      # 강제로 UTF-8로 설정되도록 함 (기본 인코딩 무시)
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3307/studyKotlin
+    username: root
+    password: root
+  jpa:
+    open-in-view: true  # 트랜잭션이 끝나도 view 렌더링(또는 컨트롤러 리턴)까지 영속성 컨텍스트를 유지하여 LAZY 필드 정상 조회 가능
+    hibernate:
+      ddl-auto: create    # 실행 시마다 테이블 새로 만듦 (초기 개발용). 주의 : 기존 테이블 삭제 후 재생성함
+      use-new-id-generator-mapping: false
+    properties:
+      hibernate:
+        show_sql: false   # Hibernate 기본 System.out 비활성화
+        format_sql: true   # log가 찍힐 때 sql이 보기 좋게 출력 됨
+        highlight_sql: true  # 컬러 적용 (콘솔에서만 효과)
+
+logging:
+  pattern:
+    console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:%line] - %msg%n"   # 예시 : [15:23:12.123][INFO ][com.example.MyService.doSomething:42] - 사용자 로그인 완료
+  level:
+    org:
+      hibernate:
+        type.descriptor.sql: trace   # 쿼리에 바인딩된 파라미터도 함께 출력
+        SQL: debug                   # 실행된 SQL을 로그에 출력
+
+REST_API_KEY: ${REST_API_KEY}
