@@ -51,4 +51,20 @@ Content-Type: application/json;charset=UTF-8
 ---
 
 ### Postman으로 API 테스트
-![](docs/image%20(12).png)
+![블로그 검색](docs/image%20(12).png)
+![검색어 상위 10개 조회](docs/image%20(13).png)
+![유효하지 않은 입력값 검증](docs/image%20(14).png)
+
+---
+
+### Docker를 통해 MariaDB 설치
+```bash
+docker pull mariadb
+docker run —name mariadb -d -p 3306:3306 —restart=always -e MYSQL_ROOT_PASSWORD=패스워드 mariadb
+# 접속
+docker exec -it mariadb /bin/bash
+# 실행 및 패스워드 입력
+mariadb -u root -p
+
+# MySQL workbench를 통해서도 DB 접속, 실행 가능
+```
