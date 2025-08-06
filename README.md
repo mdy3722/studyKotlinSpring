@@ -51,3 +51,4 @@ Content-Type: application/json;charset=UTF-8
 ---
 
 ### Postman으로 API 테스트
+![](image%20(12).png)
