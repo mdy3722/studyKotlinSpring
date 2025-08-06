@@ -51,8 +51,11 @@ Content-Type: application/json;charset=UTF-8
 ---
 
 ### Postman으로 API 테스트
+#### ✅ 블로그 검색 API 테스트 결과
 ![블로그 검색](docs/image%20(12).png)
+#### ✅ 검색어 상위 10개 조회 결과
 ![검색어 상위 10개 조회](docs/image%20(13).png)
+#### ❌ 유효하지 않은 입력값 검증 예시
 ![유효하지 않은 입력값 검증](docs/image%20(14).png)
 
 ---
